@@ -1,0 +1,3 @@
+payload:
+  # Google 服务：虽然域名带 .cn，但中国大陆直连不可用
+  - DOMAIN,services.googleapis.cn
