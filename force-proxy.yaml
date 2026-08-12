@@ -1,4 +1,6 @@
 payload:
   # Google 服务：虽然域名带 .cn，但中国大陆直连不可用
   - DOMAIN,services.googleapis.cn
-  - DOMAIN,example.com
+
+  # Microsoft App Center：当前被 GeoSite(CN) 误判为直连并持续超时
+  - DOMAIN,in.appcenter.ms
