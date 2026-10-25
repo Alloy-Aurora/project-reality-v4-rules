@@ -1,6 +1,12 @@
 payload:
-  # Google 服务：虽然域名带 .cn，但中国大陆直连不可用
+  # 保留既有例外，优先于后续国内地理规则
   - DOMAIN,services.googleapis.cn
-
-  # Microsoft App Center：当前被 GeoSite(CN) 误判为直连并持续超时
   - DOMAIN,in.appcenter.ms
+
+  # AI 服务及其静态资源：显式匹配，避免依赖地理数据库分类
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,oaistatic.com
+  - DOMAIN-SUFFIX,oaiusercontent.com
+  - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,claude.ai
